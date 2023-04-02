@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">DOM Manipulation with Forms</h1>
+        <form class="form" id="form">
+            <div class="form-group">
+                <p id="description">Please fill the form and choose your favourite food</p>
+                <input class="uInput" type="text" placeholder="First Name" id="first-name" required> <br>
+                <input class="uInput" type="text" placeholder="Last Name" id="last-name" required> <br>
+                <textarea id="address" rows="3" placeholder="Enter Address"></textarea>
+                <input class="uInput" type="text" placeholder="Pincode" id="pincode" required> <br>
+                <div class="gender">
+                    <label for="">Choose Gender :</label>
+                    <span><input  type="radio" value="Male" name="gender" class="choose-gen" checked> Male</span>
+                    <span><input  type="radio" value="Female" name="gender" class="choose-gen"> Female</span>
+                    <span><input  type="radio" value="Transgender" name="gender" class="choose-gen"> Transgender</span>
+                </div>
+                <input class="uInput" type="text" placeholder="Choice of food" name="food" suggestions="no"><br>
+                <input class="uInput" type="text" placeholder="State" name="state" suggestions="no"><br>
+                <input class="uInput" type="text" placeholder="Country" name="country" suggestions="no">
+                <div class="btn-div">
+                    <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <div class="table-div">
+            <table class="table">
+                <thead>
+                    <th width="150px">First Name</th>
+                    <th width="150px">Last Name</th>
+                    <th width="280px">Address</th>
+                    <th width="100px">Pincode</th>
+                    <th width="100px">Gender</th>
+                    <th width="170px">Choice of food</th>
+                    <th width="150px">State</th>
+                    <th width="120px">Country</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="delete-btn">
+            <input onclick="deleteFunc()" class="tableBtn" type="reset" value="Reset Table">
+        </div>
+    </div>
+    <div class="alert-msg">
+        <h4>Firstname, Lastname or Pincode should not be Empty</h4>
+        <button type="reset" id="err-close-btn">Close</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
